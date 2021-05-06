@@ -146,13 +146,13 @@ namespace SEB_NAMESPACE {
     Smallest_enclosing_ball& operator=(const Smallest_enclosing_ball&);
     
   private: // member fields:
-    unsigned int dim;                 // dimension of the amient space
-    const PointAccessor &S;           // set S of inserted points
-    bool up_to_date;                  // whether the miniball has
-                                      // already been computed
-    Float *center;                    // center of the miniball
-    Float radius_, radius_square;     // squared radius of the miniball
-    Subspan<Float, Pt, PointAccessor> *support;          // the points that lie on the current
+    unsigned int dim;                           // dimension of the amient space
+    const PointAccessor &S;                     // set S of inserted points
+    bool up_to_date;                            // whether the miniball has
+                                                // already been computed
+    Float *center;                              // center of the miniball
+    Float radius_=0.0f, radius_square=0.0f;     // squared radius of the miniball
+    Subspan<Float, Pt, PointAccessor> *support; // the points that lie on the current
     // boundary and "support" the ball;
     // the essential structure for update()
     
