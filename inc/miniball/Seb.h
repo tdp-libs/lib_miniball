@@ -118,7 +118,7 @@ namespace SEB_NAMESPACE {
     
     void verify();
     //  Verifies whether center lies really in affine hull,
-    //  determines the consistency of the QR descene,
+    //  determines the consistency of the QR decomposition,
     //  and check whether all points of Q lie on the ball
     //  and all others within;
     //  prints the respective errors.

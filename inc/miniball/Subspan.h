@@ -148,7 +148,7 @@ namespace SEB_NAMESPACE {
     // via Givens rotations.
     
     void special_rank_1_update();
-    // Update current QR-descene "A = QR" to
+    // Update current QR-decomposition "A = QR" to
     // A + u [1,...,1] = Q' R'.
     
   private: // member fields:
@@ -162,7 +162,7 @@ namespace SEB_NAMESPACE {
     // in M.  The point members[r] is called the "origin."
     std::vector<unsigned int> members;
     
-  private: // member fields for maintaining the QR-descene:
+  private: // member fields for maintaining the QR-decomposition:
     Float **Q, **R;                    // (dim x dim)-matrices Q
     // (orthogonal) and R (upper
     // triangular); notice that

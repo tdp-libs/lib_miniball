@@ -96,7 +96,7 @@ namespace SEB_NAMESPACE {
     for (unsigned int i=0; i<dim; ++i)
       u[i] = S[index][i] - SEB_AFFINE_ORIGIN[i];
     
-    // appends new column u to R and updates QR-descene,
+    // appends new column u to R and updates QR-decomposition,
     // routine work with old r:
     append_column();
     
@@ -315,7 +315,7 @@ namespace SEB_NAMESPACE {
   
   template<typename Float, class Pt, class PointAccessor>
   void Subspan<Float, Pt, PointAccessor>::special_rank_1_update ()
-  // Update current QR-descene "A = QR" to
+  // Update current QR-decomposition "A = QR" to
   // A + u * [1,...,1] = Q' R'.
   {
     //  compute w = Q^T * u
