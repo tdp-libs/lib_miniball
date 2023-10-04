@@ -63,7 +63,7 @@ namespace SEB_NAMESPACE {
         radius_square = dist;
         farthest = j;
       }
-      radius_ = sqrt(radius_square);
+      radius_ = std::sqrt(radius_square);
     }
     
     // initialize support to the farthest point:
@@ -208,7 +208,7 @@ namespace SEB_NAMESPACE {
       // Compute a walking direction and walking vector,
       // and check if the former is perhaps too small:
       while ((dist_to_aff
-              = sqrt(dist_to_aff_square
+              = std::sqrt(dist_to_aff_square
                      = support->shortest_vector_to_span(center,
                                                         center_to_aff)))
              <= Eps * radius_)
@@ -251,7 +251,7 @@ namespace SEB_NAMESPACE {
         radius_square = 0;
         for (unsigned int i = 0; i < dim; ++i)
           radius_square += sqr(stop_point[i] - center[i]);
-        radius_ = sqrt(radius_square);
+        radius_ = std::sqrt(radius_square);
         SEB_LOG ("debug","  current radius = "
                  << std::setiosflags(std::ios::scientific)
                  << std::setprecision(17) << radius_
@@ -273,7 +273,7 @@ namespace SEB_NAMESPACE {
         radius_square = 0;
         for (unsigned int i = 0; i < dim; ++i)
           radius_square += sqr(stop_point[i] - center[i]);
-        radius_ = sqrt(radius_square);
+        radius_ = std::sqrt(radius_square);
         SEB_LOG ("debug","  current radius = "
                  << std::setiosflags(std::ios::scientific)
                  << std::setprecision(17) << radius_
